@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Layout-menu</title>
+    </h:head>
+    <h:body>
+        <p:layout fullPage="true">
+            <p:layoutUnit position="north">
+                <h:form>
+                    <p:menu styleClass="ui-menubar" style="width: auto;">
+                        <p:submenu>
+                            <p:menuitem value="Obrazec" 
+                                        outcome="novObrazec">
+                            </p:menuitem>
+                            <p:menuitem value="Skladišče" 
+                                        outcome="pregledOpreme">
+                            </p:menuitem>
+                        </p:submenu>
+                    </p:menu>
+                </h:form>
+            </p:layoutUnit>
+            
+            <p:layoutUnit position="west">
+                <ui:insert name="menu" />
+            </p:layoutUnit>
+
+            <p:layoutUnit position="center">
+                <ui:insert name="source" />
+            </p:layoutUnit>
+        </p:layout>
+    </h:body>
+</html>
